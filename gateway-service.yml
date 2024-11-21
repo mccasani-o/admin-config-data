@@ -1,0 +1,36 @@
+server:
+  port: 8882
+eureka:
+  client:
+#    registryWithEureka: true
+#    fetchRegistry: true
+    service-url:
+      defaultZone: http://localhost:8881/eureka/
+#    instance:
+#      hostname: localhost
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: ms-producto
+          uri: http://localhost:8999/productos
+          predicates:
+            - Path=/productos/**
+        - id: ms-cliente
+          uri: http://localhost:8991/clientes
+          predicates:
+            - Path=/clientes/**
+        - id: ms-pedido
+          uri: http://localhost:8992/pedidos
+          predicates:
+            - Path=/pedidos/**
+        - id: ms-pedido-cliente
+          uri: http://localhost:8993/detalles
+          predicates:
+            - Path=/detalles/**   
+  #application:
+  #  name: registry-service          
