@@ -20,6 +20,10 @@ spring:
           uri: http://localhost:8999/api/v1/customers
           predicates:
             - Path=/api/v1/customers/**
+        - id: sg-product
+          uri: http://localhost:8991/api/v1/products
+          predicates:
+            - Path=/api/v1/products/**    
          
   #application:
   #  name: registry-service          

@@ -1,0 +1,14 @@
+server:
+  port: 8991
+
+
+spring:
+  data:
+    mongodb:
+      database: productDB
+      port: '27017'
+      host: localhost
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8881/eureka/
