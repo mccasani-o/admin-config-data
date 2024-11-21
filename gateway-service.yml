@@ -16,21 +16,10 @@ spring:
         locator:
           enabled: true
       routes:
-        - id: ms-producto
-          uri: http://localhost:8999/productos
+        - id: sg-customer
+          uri: http://localhost:8999/api/v1/customers
           predicates:
-            - Path=/productos/**
-        - id: ms-cliente
-          uri: http://localhost:8991/clientes
-          predicates:
-            - Path=/clientes/**
-        - id: ms-pedido
-          uri: http://localhost:8992/pedidos
-          predicates:
-            - Path=/pedidos/**
-        - id: ms-pedido-cliente
-          uri: http://localhost:8993/detalles
-          predicates:
-            - Path=/detalles/**   
+            - Path=/api/v1/customers/**
+         
   #application:
   #  name: registry-service          
