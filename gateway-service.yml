@@ -24,10 +24,13 @@ spring:
           uri: http://localhost:8991/api/v1/products
           predicates:
             - Path=/api/v1/products/**   
-        - id: sg-product
+        - id: sg-banking-movements
           uri: http://localhost:8992/api/v1/movements
           predicates:
-            - Path=/api/v1/movements/**      
+            - Path=/api/v1/movements/** 
+          uri: http://localhost:8992/api/v1/banking-operation
+          predicates:
+            - Path=/api/v1/banking-operation**       
          
   #application:
   #  name: registry-service          
