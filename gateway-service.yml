@@ -28,6 +28,7 @@ spring:
           uri: http://localhost:8992/api/v1/movements
           predicates:
             - Path=/api/v1/movements/** 
+        - id: sg-banking-movements    
           uri: http://localhost:8992/api/v1/banking-operation
           predicates:
             - Path=/api/v1/banking-operation**       
