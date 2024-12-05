@@ -8,6 +8,11 @@ spring:
       database: customerDB
       port: '27017'
       host: localhost
+  cache:
+    type: redis
+  redis:
+    host: localhost
+    port: '6379'    
 eureka:
   client:
     service-url:
